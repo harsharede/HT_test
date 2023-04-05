@@ -36,7 +36,7 @@ In this process we will spin up 1 master, 1 worker, 1 sparkhistory severs in con
 
 4. You can submit a PySpark job to the cluster by running the following command. Replace "container id" with the name of your Docker image id.
 
-    `spark-submit --packages io.delta:delta-core_2.12:2.1.0 --conf spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog --master spark://<container id>:7077 --executor-memory 1g /opt/mnt/src/Legal_ent_example.py `
+    `spark-submit --master spark://<container id>:7077 --executor-memory 1g /opt/mnt/src/Legal_ent_example.py `
 
 ## Pandas Sample Output
 ![img.png](img.png)
